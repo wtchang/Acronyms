@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  Definition.m
 //  Acronyms
 //
 //  Created by William Chang on 11/9/15.
 //  Copyright © 2015 WillChang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Definition.h"
 
-@interface ViewController : UIViewController
-
+@implementation Definition
 
 @end
-

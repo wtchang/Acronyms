@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44BBA28B5F4C1A0FBCA017F3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C36F04AD3D536BCEB8462F /* libPods.a */; };
 		96DB11D11BF15591000EB41E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB11D01BF15591000EB41E /* main.m */; };
 		96DB11D41BF15591000EB41E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB11D31BF15591000EB41E /* AppDelegate.m */; };
-		96DB11D71BF15591000EB41E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB11D61BF15591000EB41E /* ViewController.m */; };
+		96DB11D71BF15591000EB41E /* AcronymTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB11D61BF15591000EB41E /* AcronymTableViewController.m */; };
 		96DB11DA1BF15591000EB41E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96DB11D81BF15591000EB41E /* Main.storyboard */; };
 		96DB11DC1BF15591000EB41E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96DB11DB1BF15591000EB41E /* Assets.xcassets */; };
 		96DB11DF1BF15591000EB41E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96DB11DD1BF15591000EB41E /* LaunchScreen.storyboard */; };
 		96DB11EA1BF15591000EB41E /* AcronymsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB11E91BF15591000EB41E /* AcronymsTests.m */; };
 		96DB11F51BF15591000EB41E /* AcronymsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB11F41BF15591000EB41E /* AcronymsUITests.m */; };
+		96DB12041BF16917000EB41E /* AcronymTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB12031BF16917000EB41E /* AcronymTableViewCell.m */; };
+		96DB12131BF19546000EB41E /* Acronym.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB12121BF19546000EB41E /* Acronym.m */; };
+		96DB12161BF1A0F0000EB41E /* Definition.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB12151BF1A0F0000EB41E /* Definition.m */; };
+		96DB12191BF1A160000EB41E /* Var.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB12181BF1A160000EB41E /* Var.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90C36F04AD3D536BCEB8462F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DB11CC1BF15591000EB41E /* Acronyms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Acronyms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DB11D01BF15591000EB41E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96DB11D21BF15591000EB41E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		96DB11D31BF15591000EB41E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		96DB11D51BF15591000EB41E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		96DB11D61BF15591000EB41E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		96DB11D51BF15591000EB41E /* AcronymTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AcronymTableViewController.h; sourceTree = "<group>"; };
+		96DB11D61BF15591000EB41E /* AcronymTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcronymTableViewController.m; sourceTree = "<group>"; };
 		96DB11D91BF15591000EB41E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96DB11DB1BF15591000EB41E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96DB11DE1BF15591000EB41E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +57,16 @@
 		96DB11F01BF15591000EB41E /* AcronymsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcronymsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DB11F41BF15591000EB41E /* AcronymsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcronymsUITests.m; sourceTree = "<group>"; };
 		96DB11F61BF15591000EB41E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96DB12021BF16917000EB41E /* AcronymTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcronymTableViewCell.h; sourceTree = "<group>"; };
+		96DB12031BF16917000EB41E /* AcronymTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcronymTableViewCell.m; sourceTree = "<group>"; };
+		96DB12111BF19546000EB41E /* Acronym.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Acronym.h; sourceTree = "<group>"; };
+		96DB12121BF19546000EB41E /* Acronym.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Acronym.m; sourceTree = "<group>"; };
+		96DB12141BF1A0EF000EB41E /* Definition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Definition.h; sourceTree = "<group>"; };
+		96DB12151BF1A0F0000EB41E /* Definition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Definition.m; sourceTree = "<group>"; };
+		96DB12171BF1A160000EB41E /* Var.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Var.h; sourceTree = "<group>"; };
+		96DB12181BF1A160000EB41E /* Var.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Var.m; sourceTree = "<group>"; };
+		BA21E3FCA9E05E51EA6B08BD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DF609BB8B55F897D9CA48AAD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44BBA28B5F4C1A0FBCA017F3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +95,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B0CFBC8864552215230C32F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90C36F04AD3D536BCEB8462F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		962CABD5689FC4F4D0A7AC00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF609BB8B55F897D9CA48AAD /* Pods.debug.xcconfig */,
+				BA21E3FCA9E05E51EA6B08BD /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		96DB11C31BF15591000EB41E = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +119,8 @@
 				96DB11E81BF15591000EB41E /* AcronymsTests */,
 				96DB11F31BF15591000EB41E /* AcronymsUITests */,
 				96DB11CD1BF15591000EB41E /* Products */,
+				962CABD5689FC4F4D0A7AC00 /* Pods */,
+				2B0CFBC8864552215230C32F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,13 +139,16 @@
 			children = (
 				96DB11D21BF15591000EB41E /* AppDelegate.h */,
 				96DB11D31BF15591000EB41E /* AppDelegate.m */,
-				96DB11D51BF15591000EB41E /* ViewController.h */,
-				96DB11D61BF15591000EB41E /* ViewController.m */,
+				96DB11D51BF15591000EB41E /* AcronymTableViewController.h */,
+				96DB11D61BF15591000EB41E /* AcronymTableViewController.m */,
+				96DB12021BF16917000EB41E /* AcronymTableViewCell.h */,
+				96DB12031BF16917000EB41E /* AcronymTableViewCell.m */,
 				96DB11D81BF15591000EB41E /* Main.storyboard */,
 				96DB11DB1BF15591000EB41E /* Assets.xcassets */,
 				96DB11DD1BF15591000EB41E /* LaunchScreen.storyboard */,
 				96DB11E01BF15591000EB41E /* Info.plist */,
 				96DB11CF1BF15591000EB41E /* Supporting Files */,
+				96DB121A1BF1C6E9000EB41E /* Model */,
 			);
 			path = Acronyms;
 			sourceTree = "<group>";
@@ -140,6 +179,19 @@
 			path = AcronymsUITests;
 			sourceTree = "<group>";
 		};
+		96DB121A1BF1C6E9000EB41E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96DB12141BF1A0EF000EB41E /* Definition.h */,
+				96DB12151BF1A0F0000EB41E /* Definition.m */,
+				96DB12171BF1A160000EB41E /* Var.h */,
+				96DB12181BF1A160000EB41E /* Var.m */,
+				96DB12111BF19546000EB41E /* Acronym.h */,
+				96DB12121BF19546000EB41E /* Acronym.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96DB11F91BF15591000EB41E /* Build configuration list for PBXNativeTarget "Acronyms" */;
 			buildPhases = (
+				03395D6027E72402E0D647DC /* Check Pods Manifest.lock */,
 				96DB11C81BF15591000EB41E /* Sources */,
 				96DB11C91BF15591000EB41E /* Frameworks */,
 				96DB11CA1BF15591000EB41E /* Resources */,
+				A1D3909AE86A5BFA22FD0B39 /* Embed Pods Frameworks */,
+				8D7D44946355FDC433B281D8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,13 +320,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03395D6027E72402E0D647DC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8D7D44946355FDC433B281D8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1D3909AE86A5BFA22FD0B39 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		96DB11C81BF15591000EB41E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96DB11D71BF15591000EB41E /* ViewController.m in Sources */,
+				96DB11D71BF15591000EB41E /* AcronymTableViewController.m in Sources */,
+				96DB12041BF16917000EB41E /* AcronymTableViewCell.m in Sources */,
+				96DB12161BF1A0F0000EB41E /* Definition.m in Sources */,
+				96DB12131BF19546000EB41E /* Acronym.m in Sources */,
 				96DB11D41BF15591000EB41E /* AppDelegate.m in Sources */,
+				96DB12191BF1A160000EB41E /* Var.m in Sources */,
 				96DB11D11BF15591000EB41E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +516,7 @@
 		};
 		96DB11FA1BF15591000EB41E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF609BB8B55F897D9CA48AAD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Acronyms/Info.plist;
@@ -420,6 +528,7 @@
 		};
 		96DB11FB1BF15591000EB41E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA21E3FCA9E05E51EA6B08BD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Acronyms/Info.plist;
@@ -496,6 +605,7 @@
 				96DB11FB1BF15591000EB41E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96DB11FC1BF15591000EB41E /* Build configuration list for PBXNativeTarget "AcronymsTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +614,7 @@
 				96DB11FE1BF15591000EB41E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96DB11FF1BF15591000EB41E /* Build configuration list for PBXNativeTarget "AcronymsUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +623,7 @@
 				96DB12011BF15591000EB41E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
