@@ -10,7 +10,7 @@
 #import "JSONModel.h"
 #import "Definition.h"
 
-
+//Mapped from JSON object
 @interface Acronym : JSONModel
 @property NSArray<Definition> *lfs;
 @property NSString* sf;

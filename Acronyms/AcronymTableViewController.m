@@ -39,16 +39,22 @@
     NSURL *url = [NSURL URLWithString:string];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
+    //MBProgressHUD requirement
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = @"Fetching Results...";
     [hud show:YES];
+    
+    //AFHTTPRequest requirement, async calls
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     operation.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+       //Tests resoponse object
         NSLog(@"RESPONSE:%@",[responseObject description]);
-
+        
+        //Converts to our NSObject model
         NSArray* acronymModel = [Acronym arrayOfModelsFromDictionaries: responseObject];
+        //Add to datasource
         if([acronymModel count]>0){
          self.definitionArray=[((Acronym*)[acronymModel firstObject]).lfs mutableCopy];
         }else{
@@ -59,17 +65,19 @@
 
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        hud.labelText = @"Error Fetching Results...Try Again";
-        [hud show:YES];
-        [hud hide:YES afterDelay:3];
+        //show error messsage if no network connection or cannot reach API
+        [hud hide:YES];
+        MBProgressHUD *hudFail = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hudFail.labelText = @"Error Fetching Results...";
+        [hudFail show:YES];
+        [hudFail hide:YES afterDelay:3];
     }];
     
 
     [operation start];
     
 }
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     NSInteger numOfSections = 0;
@@ -81,6 +89,7 @@
     }
     else
     {
+        //show no results when no results or empty data source
         UILabel *noDataLabel         = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.tableView.bounds.size.width, self.tableView.bounds.size.height)];
         noDataLabel.text             = @"No results";
         noDataLabel.textColor        = [UIColor blackColor];
@@ -100,7 +109,11 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 71;
+    return 70;
+}
+
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath{
+    return NO;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -113,9 +126,9 @@
         cell = [[AcronymTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    //Get our definition object
     Definition * definition = [self.definitionArray objectAtIndex:(indexPath.row)];
 
-    
     cell.textView.text=definition.lf;
 
     return cell;
@@ -127,22 +140,15 @@
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    //initiate search
      [self getDefintions:searchBar.text];
+    //dont show keyboard
+     [searchBar resignFirstResponder];
 }
 
-- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
-     [self getDefintions:searchBar.text];
-}
 
-- (void)handleSearch:(UISearchBar *)searchBar {
-    NSLog(@"User searched for %@", searchBar.text);
-    [searchBar resignFirstResponder]; // if you want the keyboard to go away
-}
 
-- (void)searchBarCancelButtonClicked:(UISearchBar *) searchBar {
-    NSLog(@"User canceled search");
-    [searchBar resignFirstResponder]; // if you want the keyboard to go away
-}
+
 
 
 @end
